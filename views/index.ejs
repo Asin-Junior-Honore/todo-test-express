@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><%= title %></h1>
+      <form action="/add-task" method="POST">
+        <input type="text" name="task" placeholder="New Task" required />
+        <button type="submit">Add Task</button>
+      </form>
+      <ul>
+        <% tasks.forEach(function(task) { %>
+        <li><%= task %></li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
